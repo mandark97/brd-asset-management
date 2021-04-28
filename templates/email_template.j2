@@ -1,0 +1,289 @@
+<html>
+<head></head>
+<body>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="max-width:500px">
+                    <tr>
+                        <td align="center">
+                            <table width="90%" height="0" border="0" cellpadding="0" cellspacing="0" class="wrap90"
+                                style="table-layout:fixed">
+                                <tr>
+                                {% for index in range(6, -1, -1) %}
+                                    <td valign="bottom">
+                                        <!--[if (gte mso 9)|(IE)]> <table width="47" align="center" cellpadding="0" cellspacing="0" border="0"> <tr> <td> <![endif]-->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                            style="max-width:90%" align="center">
+                                            <tr>
+                                                <td valign="bottom" align="center">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="font-size:0px; line-height:0px;">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td align="left" valign="bottom">
+                                                                <table width="100%" cellpadding="0" cellspacing="0"
+                                                                    border="0" class="chartWidth" style="width:100%">
+                                                                    <tr>
+                                                                        <td align="center" class="label"
+                                                                            style="color: #717172; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 28px; text-align:center;">
+                                                                            {{ simfonia.data[index] }}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9"
+                                                                            style="font-size:1px;line-height:1px"> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="{{ ((simfonia.data[index] - simfonia.data[:7]|min) * (MAX_PIXELS / (simfonia.data[:7]|max - simfonia.data[:7]|min))) + 50 }}"
+                                                                            class="animate"
+                                                                            style="font-size:0px; line-height:0px; background-image: linear-gradient({{ simfonia.plot.start_color }}, {{ simfonia.plot.end_color }});"
+                                                                            bgcolor="#17a2b8">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+                                    </td>
+                                {% endfor %}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="">
+                                            <tr>
+                                                <td height="1" width="100%" bgcolor="#c3c8c9" class="tronHr"
+                                                    style="background-color:#c3c8c9;font-size:1px;line-height:1px">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="90%" height="20" border="0" cellpadding="0" cellspacing="0" class=""
+                                style="table-layout:fixed">
+                            </table>
+                            <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <b>TOTAL {{ simfonia.name|upper }}</b>
+                            </p>
+                            <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                You are <b>{% if simfonia.gain > 0 %} up {% else %} down {% endif %} {{ simfonia.gain|abs }} RON</b> on {{ simfonia.latest_date }}</p>
+                                <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                Maximum gain was <b>{{ simfonia.max_gain|abs }} RON</b></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="max-width:500px">
+                    <tr>
+                        <td align="center">
+                            <table width="90%" height="0" border="0" cellpadding="0" cellspacing="0" class="wrap90"
+                                style="table-layout:fixed">
+                                <tr>
+                                {% for index in range(6, -1, -1) %}
+                                    <td valign="bottom">
+                                        <!--[if (gte mso 9)|(IE)]> <table width="47" align="center" cellpadding="0" cellspacing="0" border="0"> <tr> <td> <![endif]-->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                            style="max-width:90%" align="center">
+                                            <tr>
+                                                <td valign="bottom" align="center">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="font-size:0px; line-height:0px;">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td align="left" valign="bottom">
+                                                                <table width="100%" cellpadding="0" cellspacing="0"
+                                                                    border="0" class="chartWidth" style="width:100%">
+                                                                    <tr>
+                                                                        <td align="center" class="label"
+                                                                            style="color: #717172; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 28px; text-align:center;">
+                                                                            {{ diverso.data[index] }}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9"
+                                                                            style="font-size:1px;line-height:1px"> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="{{ ((diverso.data[index] - diverso.data[:7]|min) * (MAX_PIXELS / (diverso.data[:7]|max - diverso.data[:7]|min))) + 50 }}"
+                                                                            class="animate"
+                                                                            style="font-size:0px; line-height:0px; background-image: linear-gradient({{ diverso.plot.start_color }}, {{ diverso.plot.end_color }});"
+                                                                            bgcolor="#17a2b8">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+                                    </td>
+                                {% endfor %}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="">
+                                            <tr>
+                                                <td height="1" width="100%" bgcolor="#c3c8c9" class="tronHr"
+                                                    style="background-color:#c3c8c9;font-size:1px;line-height:1px">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="90%" height="20" border="0" cellpadding="0" cellspacing="0" class=""
+                                style="table-layout:fixed">
+                            </table>
+                            <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <b>TOTAL {{ diverso.name|upper }}</b>
+                            </p>
+                            <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                You are <b>{% if diverso.gain > 0 %} up {% else %} down {% endif %} {{ diverso.gain|abs }} RON</b> on {{ diverso.latest_date }}</p>
+                                <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                Maximum gain was <b>{{ diverso.max_gain|abs }} RON</b></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="max-width:500px">
+                    <tr>
+                        <td align="center">
+                            <table width="90%" height="0" border="0" cellpadding="0" cellspacing="0" class="wrap90"
+                                style="table-layout:fixed">
+                                <tr>
+                                {% for index in range(6, -1, -1) %}
+                                    <td valign="bottom">
+                                        <!--[if (gte mso 9)|(IE)]> <table width="47" align="center" cellpadding="0" cellspacing="0" border="0"> <tr> <td> <![endif]-->
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                            style="max-width:90%" align="center">
+                                            <tr>
+                                                <td valign="bottom" align="center">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="font-size:0px; line-height:0px;">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td align="left" valign="bottom">
+                                                                <table width="100%" cellpadding="0" cellspacing="0"
+                                                                    border="0" class="chartWidth" style="width:100%">
+                                                                    <tr>
+                                                                        <td align="center" class="label"
+                                                                            style="color: #717172; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 28px; text-align:center;">
+                                                                            {{ total.data[index] }}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="9"
+                                                                            style="font-size:1px;line-height:1px"> </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="{{ ((total.data[index] - total.data[:7]|min) * (MAX_PIXELS / (total.data[:7]|max - total.data[:7]|min))) + 50 }}"
+                                                                            class="animate"
+                                                                            style="font-size:0px; line-height:0px; background-image: linear-gradient({{ total.plot.start_color }}, {{ total.plot.end_color }});"
+                                                                            bgcolor="#17a2b8">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+                                    </td>
+                                {% endfor %}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="">
+                                            <tr>
+                                                <td height="1" width="100%" bgcolor="#c3c8c9" class="tronHr"
+                                                    style="background-color:#c3c8c9;font-size:1px;line-height:1px">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="90%" height="20" border="0" cellpadding="0" cellspacing="0" class=""
+                                style="table-layout:fixed">
+                            </table>
+                            <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <b>TOTAL</b>
+                            </p>
+                            <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                You are <b>{% if total.gain > 0 %} up {% else %} down {% endif %} {{ total.gain|abs }} RON</b> on {{ total.latest_date }}</p>
+                                <p align="center"
+                                style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                Maximum gain was <b>{{ total.max_gain|abs }} RON</b></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
