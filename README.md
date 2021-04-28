@@ -4,7 +4,7 @@
 
 ## Introduction
 
-* This is a simple Python script and Jinja2 template that allows you to leverage AWS Lambda and AWS SES (Simple Email Service) to send various information about your BRD Asset Management portfolios.  
+* This is a simple Python script and Jinja2 template that allows you to leverage AWS Lambda and AWS SES (Simple Email Service) to send various metrics about your BRD Asset Management portfolios.  
   
 * The scripts is now configured for BRD Simfonia and BRD Diverso A, but feel free to fork and add or remove portfolios.
 
