@@ -48,7 +48,7 @@
 | AWS_ACCESS_KEY_ID     | Get this from your IAM User. Used to connect to AWS.                          |
 | AWS_SECRET_ACCESS_KEY | Get this from your IAM User. Used to connect to AWS.                          |
 | AWS_DEFAULT_REGION    | The AWS Region you're using. Used to connect to AWS.                          |
-| LAMBDA_FUNCTION_NAME  | The AWS Lambda Function name you'll be using. Function to deploy code to.     |
+| LAMBDA_FUNCTION_NAME  | The AWS Lambda Function name you'll be using.                                 |
 | LAMBDA_LAYER_ARN      | The GitHub Action will install the function dependencies as a separate layer. |
 
 ### Environment Variables
