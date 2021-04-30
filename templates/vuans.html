@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<h1>{{fund}}</h1>
+<table>
+  <thead>
+    <th>Date</th>
+    <th>VUAN</th>
+  </thead>
+  <tbody>
+    {% for d in data %}
+      <tr>
+        <td>{{d.date}}</td>
+        <td>{{d.value}}</td>
+      </tr>
+      {% endfor %}
+  </tbody>
+</table>
